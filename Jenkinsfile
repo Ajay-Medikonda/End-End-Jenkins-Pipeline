@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-		stage('Packer Build AMI') {
+	stage('Packer Build AMI') {
           steps {
             
             sh 'pwd'
@@ -10,7 +10,7 @@ pipeline {
             }
         }
 				
-		stage('Deploy EC2 Server') {
+	stage('Deploy EC2 Server') {
           steps {
 		        sh 'terraform init'
             sh 'terraform plan'
