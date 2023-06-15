@@ -33,8 +33,8 @@ pipeline {
         stage('Deploy to Docker Host') {
           steps {
 		    sh 'sleep 30s'
-            sh    'docker -H tcp://10.0.1.111:2375 stop prodwebapp1 || true'
-            sh    'docker -H tcp://10.0.1.111:2375 run --rm -dit --name prodwebapp1 --hostname prodwebapp1 -p 8000:80 ajaymedikonda/devops:${BUILD_NUMBER}'
+            sh    'docker -H tcp://10.0.1.11:2375 stop prodwebapp1 || true'
+            sh    'docker -H tcp://10.0.1.11:2375 run --rm -dit --name prodwebapp1 --hostname prodwebapp1 -p 8000:80 ajaymedikonda/devops:${BUILD_NUMBER}'
             }
         }
 
