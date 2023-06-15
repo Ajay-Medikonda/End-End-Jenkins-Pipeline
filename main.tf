@@ -24,7 +24,7 @@ resource "aws_instance" "web-1" {
     instance_type = "t2.micro"
     key_name = "Keypair"
     subnet_id = "subnet-06cc8871db734eb74"
-    private_ip = "10.0.1.111"
+    private_ip = "10.0.1.11"
     vpc_security_group_ids = ["sg-06185d7d1792c69a0"]
     associate_public_ip_address = true	
     tags = {
